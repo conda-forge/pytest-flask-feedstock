@@ -1,7 +1,7 @@
 About pytest-flask
 ==================
 
-Home: https://github.com/pytest/pytest-flask
+Home: https://github.com/pytest-dev/pytest-flask
 
 Package license: MIT
 

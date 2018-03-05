@@ -28,14 +28,14 @@ test:
     - pytest_flask
 
 about:
-  home: https://github.com/pytest/pytest-flask
+  home: https://github.com/pytest-dev/pytest-flask
   license: MIT
   license_family: MIT
   #license_file: LICENSE
   summary: A set of py.test fixtures to test Flask applications
 
   doc_url: http://pytest-flask.readthedocs.io/
-  dev_url: https://github.com/pytest/pytest-flask
+  dev_url: https://github.com/pytest-dev/pytest-flask
 
 extra:
   recipe-maintainers:
