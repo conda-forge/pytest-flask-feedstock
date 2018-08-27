@@ -1,6 +1,6 @@
 {% set name = "pytest-flask" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "2c5a36f9033ef8b6f85ddbefaebdd4f89197fc283f94b20dfe1a1beba4b77f03" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "b0014dbc87c9877effbc632dcbdab5228bc939bf8974ead8b083eb784461d69c" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
