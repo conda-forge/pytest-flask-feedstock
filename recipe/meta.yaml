@@ -1,27 +1,27 @@
-{% set name = "pytest-flask" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "2c5a36f9033ef8b6f85ddbefaebdd4f89197fc283f94b20dfe1a1beba4b77f03" %}
+{% set version = "0.11.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: pytest-flask
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/p/pytest-flask/pytest-flask-{{ version }}.tar.gz
+  sha256: b0014dbc87c9877effbc632dcbdab5228bc939bf8974ead8b083eb784461d69c
 
 build:
+  number: 0
   noarch: python
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
+    - setuptools_scm
   run:
     - python
+    - flask
+    - werkzeug >=0.7
 
 test:
   imports:
@@ -31,7 +31,7 @@ about:
   home: https://github.com/pytest-dev/pytest-flask
   license: MIT
   license_family: MIT
-  #license_file: LICENSE
+  license_file: LICENSE
   summary: A set of py.test fixtures to test Flask applications
 
   doc_url: http://pytest-flask.readthedocs.io/
@@ -40,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - sodre
+    - nicoddemus
