@@ -1,4 +1,4 @@
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: pytest-flask
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pytest-flask/pytest-flask-{{ version }}.tar.gz
-  sha256: d240537c7cfce9f28d0cd2af30f3fb0f452813fbc73cb0518d2e81363ef46112
+  sha256: 2e64ba176ccc00e84adb88b38a4a44a032a09f98992881f09b0baab9ab7d06a6
 
 build:
   number: 0
