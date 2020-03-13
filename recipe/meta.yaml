@@ -15,11 +15,11 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.5
     - pip
     - setuptools_scm
   run:
-    - python
+    - python >=3.5
     - flask
     - werkzeug >=0.7
 
