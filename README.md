@@ -5,11 +5,13 @@ Home: https://github.com/pytest-dev/pytest-flask
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-flask-feedstock/blob/master/LICENSE.txt)
 
 Summary: A set of py.test fixtures to test Flask applications
 
+Development: https://github.com/pytest-dev/pytest-flask
 
+Documentation: http://pytest-flask.readthedocs.io/
 
 Current build status
 ====================
