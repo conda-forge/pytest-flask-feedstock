@@ -5,25 +5,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pytest-flask/pytest-flask-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pytest-flask/pytest-flask-{{ version }}.tar.gz
   sha256: 58be1c97b21ba3c4d47e0a7691eb41007748506c36bf51004f78df10691fa95e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - flask
     - werkzeug >=0.7
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pytest_flask
 
